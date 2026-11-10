@@ -1,0 +1,24 @@
+﻿{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"EngineVersion": "5.8.0",
+	"FriendlyName": "GridPlacementTool",
+	"Description": "A tool that places scene objects on a grid.",
+	"Category": "Editor",
+	"CreatedBy": "Aleksandr Yakshigulov",
+	"CreatedByURL": "yakshiguloff@gmail.com",
+	"DocsURL": "https://github.com/organicFoil/GridPlacementTool",
+	"MarketplaceURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "GridPlacementTool",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
