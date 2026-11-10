@@ -8,7 +8,10 @@ The tool changes only location and rotation, actor scale is preserved.
 
 ## Table of Contents
 
-- [Requirements and installation](#requirements-and-installation)
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Opening the Tool](#opening-the-tool)
 - [Menu reference](#menu-reference)
   - [Settings](#settings)
   - [Anchor](#anchor)
@@ -19,14 +22,56 @@ The tool changes only location and rotation, actor scale is preserved.
 - [Spacing and layout](#spacing-and-layout)
 - [Automation tests](#automation-tests)
 
-## Requirements and installation
+## Getting Started
 
-- **Unreal Engine 5.8**.
+### Requirements
+
+- Unreal Engine **5.8** (the plugin descriptor targets engine version `5.8.0`).
 - **Editor-only plugin**: it is available in the editor and is not included in packaged games.
+- **Prebuilt release:** no compiler is required. Download the archive from the [Releases](https://github.com/organicFoil/GridPlacementTool/releases) page and make sure it matches your engine version and platform.
+- **Source build:** a compiler toolchain for your platform (Visual Studio on Windows).
 
-1. Copy the `GridPlacementTool` folder into your project's `Plugins` directory.
-2. Open the project and enable **GridPlacementTool** in **Edit → Plugins** (the plugin is in the **Editor** category).
-3. Restart the editor if prompted.
+### Installation
+
+#### Prebuilt release (recommended)
+
+1. Download the latest release from the [Releases](https://github.com/organicFoil/GridPlacementTool/releases) page.
+
+2. Extract the archive so that the plugin ends up in the `Plugins` folder of your project:
+
+   ```
+   <YourProject>/
+   └── Plugins/
+       └── GridPlacementTool/
+   ```
+
+   Depending on the archive layout, you may need to rename the extracted folder to `GridPlacementTool`. You can also place it in the engine's `Plugins` directory to make it available to every project.
+
+3. Launch the editor. If the plugin is not enabled yet, open **Edit → Plugins**, find **GridPlacementTool** under the **Editor** category, and enable it.
+
+4. Restart the editor when prompted.
+
+No compilation is required for the prebuilt version. Binaries are built for a specific engine version (UE 5.8, Win64), so if you use a different Unreal Engine version or platform, build the plugin from source instead.
+
+#### From source
+
+1. Clone the repository into the `Plugins` folder of your project:
+
+   ```
+   <YourProject>/
+   └── Plugins/
+       └── GridPlacementTool/
+   ```
+
+   You can also place it in the engine's `Plugins` directory to make it available to every project.
+
+2. Regenerate the project files and build the project so the editor module is compiled.
+
+3. Launch the editor. If the plugin is not enabled yet, open **Edit → Plugins**, find **GridPlacementTool** under the **Editor** category, and enable it.
+
+4. Restart the editor when prompted.
+
+### Opening the Tool
 
 The **Grid Placement** button is added to the Level Editor toolbar, in the Play toolbar area under the `PluginTools` section. It is hidden while Play-In-Editor is running.
 
